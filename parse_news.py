@@ -32,6 +32,7 @@ def get_3_best_tweets():
         tweet_html = tweets_html(html_tweet_query)
         tweet_text = tweet_html('.b-articles__b__text').text()
         tweet_author = tweet_html('.b-articles__b__name').text()
+        #TODO: Attach tweet photo to message attachments
         if tweet_html('.b-articles__b__picture'):
             tweet_picture_html = tweet_html('.b-articles__b__picture a')
             tweet_picture = tweet_picture_html.attr('href')
