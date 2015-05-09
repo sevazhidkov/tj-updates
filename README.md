@@ -2,7 +2,7 @@
 Скрипт, который присылает последние новости TJournal и лучшие твиты прямо в ВКонтакте (поддержка Telegram планируется)
 ### Установка
 ```
-
+pip install requests vk_api feedparser pyquery
 git clone https://github.com/Shamoi/tj-updates.git
 cd tj-updates
 python config.py
