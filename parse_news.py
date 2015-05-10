@@ -88,8 +88,8 @@ digest = get_3_latest_news() + get_3_best_tweets()
 for subscriber in subscribers:
     digest += get_media_analyze(subscriber['press'])
     if subscriber['type'] == 'vk':
-        send_vk_message(digest, subscriber['id'])
+        send_vk_message(digest, subscriber['id'], subscriber['name'])
     else:
-        send_telegram_message(digest, subscriber['id'])
+        send_telegram_message(digest, subscriber['id'], subscriber['name'])
 
 
