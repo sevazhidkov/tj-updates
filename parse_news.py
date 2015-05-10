@@ -73,7 +73,7 @@ def get_3_best_tweets():
         tweet_text = tweet_html('.b-articles__b__text').text()
         tweet_author = tweet_html('.b-articles__b__name').text()
         #TODO: Attach tweet photo to message attachments
-        best_tweets.append('{author}: "{tweet}".format(
+        best_tweets.append('{author}: "{tweet}"'.format(
             author=tweet_author,
             tweet=tweet_text
         ))
