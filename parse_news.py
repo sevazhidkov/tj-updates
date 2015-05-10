@@ -19,7 +19,23 @@ def get_3_latest_news():
     return latest_news
 
 
-#def get_media_analyze():
+def get_media_analyze(press_type):
+    # Select num, which contains in DOM.
+    # For example, "#blockNews2" is the
+    # block with russian news
+    if press_type == 'russian':
+        press_num = 2
+    elif press_type == 'russian_it':
+        press_num = 1
+    elif press_type == 'english_it':
+        press_num = 3
+    elif press_type == 'ukrainian':
+        press_num = 5
+    elif press_type == 'belarusian':
+        press_num = 7
+    else:
+        print("Unsupporting press type")
+        return []
 
 
 def get_3_best_tweets():
