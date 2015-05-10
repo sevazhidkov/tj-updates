@@ -1,6 +1,7 @@
 import feedparser
 import json
 import requests
+from datetime import datetime
 from pyquery import PyQuery
 from send_message import send_vk_message, send_telegram_message
 
@@ -86,6 +87,11 @@ def get_3_best_tweets():
 
 digest = get_3_latest_news() + get_3_best_tweets()
 for subscriber in subscribers:
+    # Check, that subscriber want to
+    # receive messages in this hour
+    now_hour = datetime.timetuple(datetime.now())[3]
+    if subscriber['hour'] != now_hour:
+        continue
     digest += get_media_analyze(subscriber['press'])
     if subscriber['type'] == 'vk':
         send_vk_message(digest, subscriber['id'], subscriber['name'])
