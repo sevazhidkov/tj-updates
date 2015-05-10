@@ -33,7 +33,7 @@ def send_vk_message(messages, user_id, user_name):
     })
     sleep(2)
     vk.method('messages.send', {
-            'message': 'Я курьер TJ - Сева.',
+            'message': 'Я курьер TJ, меня зовут Сева.',
             'user_id': user_id
     })
     sleep(2)
