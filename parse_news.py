@@ -11,7 +11,7 @@ def get_5_latest_news():
     latest_news = ['Последние новости:']
     news = feedparser.parse('http://tjournal.ru/rss')['items']
     # Get 5 news
-    for i in range(5):
+    for i in range(3):
         latest_news.append('{title} - {link}'.format(
             title=news[i]['title'],
             link=news[i]['link']
