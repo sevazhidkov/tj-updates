@@ -19,6 +19,9 @@ def get_3_latest_news():
     return latest_news
 
 
+#def get_media_analyze():
+
+
 def get_3_best_tweets():
     best_tweets = ['Лучшие твиты:']
     # HTML query in jQuery style to get best tweets
@@ -45,7 +48,7 @@ def get_3_best_tweets():
         ))
     return best_tweets
 
-digest = get_5_latest_news() + get_3_best_tweets()
+digest = get_3_latest_news() + get_3_best_tweets()
 for subscriber in subscribers:
     if subscriber['type'] == 'vk':
         send_vk_message(digest, subscriber['id'])
