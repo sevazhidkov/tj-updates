@@ -2,3 +2,5 @@ config.json
 vk_config.json
 credentials
 rsa.pub
+.idea
+__pycache__
