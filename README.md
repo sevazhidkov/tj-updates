@@ -46,6 +46,11 @@ sudo crontab -e
 0 18 * * *  cd ~/tj-updates && python parse_news.py # Запускать скрипт каждый день в 18:00
 ```
 Необходимо указывать все моменты, когда вы хотите, чтобы скрипт запустился. Все часы должны быть указаны в send_to.json
+
+Для поддержки Telegram необходимо установить модуль pytg (https://github.com/luckydonald/pytg) и запустить telegram-cli:
+```bash
+bin/telegram-cli --json -P 4458
+```
 ### Контакты
 Если вы хотите получать такие сообщения, но не хотите настраивать скрипт - напишите мне в ВКонтакте: https://vk.com/shamoiseva
 ### TODO
