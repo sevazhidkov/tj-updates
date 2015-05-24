@@ -88,7 +88,7 @@ for subscriber in subscribers:
         continue
     digest += get_media_analyze(subscriber['press'])
     if subscriber['type'] == 'vk':
-        send_vk_message(digest, subscriber['id'], subscriber['name'])
+        send_vk_message(digest, int(subscriber['id']), subscriber['name'])
     else:
         send_telegram_message(digest, subscriber['id'], subscriber['name'])
 

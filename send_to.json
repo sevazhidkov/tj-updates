@@ -1,16 +1,16 @@
 [
     {
-        "id": 91670994,
+        "id": "91670994",
         "type": "vk",
         "press": "russian_it",
         "name": "Сева",
-        "hour": 9
+        "hour": 12
     },
     {
-        "name": "user#23897509",
+        "id": "user#23897509",
         "type": "telegram",
         "press": "russian",
         "name": "Сева",
-        "hour": 9
+        "hour": 12
     }
 ]
